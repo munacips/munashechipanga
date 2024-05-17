@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Munashe Chipanga</title>
+
+   {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+    
+</head>
+<body>
+   <section class="name">
+       <h1><a href="/" class="logo">MUNASHE<span style="color: rgb(124, 124, 124);">CHIPANGA</span><span>.COM</span></a></h1>
+   </section>
+   <hr class="line">
+   <section class="links">
+       <nav>
+           <ul>
+               <li><a href="/">HOME</a></li>
+               <li><a href="/projects">PROJECTS</a></li>
+               <li><a href="/academic_info">ACADEMIC INFO</a></li>
+               <li><a href="/contact_info">CONTACT INFO</a></li>
+               <li><a href="/blog">BLOG</a></li>
+           </ul>
+       </nav>
+   </section>
+   <section class="main">
+        {%block content%}
+        {%endblock%}
+   </section>
+</body>
+</html>

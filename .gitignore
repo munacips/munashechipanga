@@ -1,0 +1,9 @@
+static/static_root/
+static/media/
+
+db.sqlite3
+
+main/__pycache__
+main/migrations
+
+munashechipanga/__pycache__
