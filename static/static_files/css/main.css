@@ -68,3 +68,41 @@ img{
     height: 100%;
     object-fit: cover;
 }
+.thumbnail{
+    width: 30%;
+}
+.project-info{
+    padding: 1em;
+    width: 70%;
+}
+.projects :nth-child(even){
+    flex-direction: row-reverse;
+    display: flex;
+    padding: o.5em;
+}
+.project{
+    flex-direction: row;
+    display: flex;
+    padding: 0.5em;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.results{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+table tr td{
+    padding: 0.25em;
+}
+.var-results{
+    font-size: 0.75em;
+    border: 1px grey solid;
+    width: max-content;
+    margin: 0 auto;
+}
+.var-results tr td{
+    padding: 0.5em;
+}

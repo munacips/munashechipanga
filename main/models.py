@@ -5,5 +5,8 @@ class Project(models.Model):
     date_started = models.DateField()
     description = models.TextField()
     thumbnail = models.ImageField(upload_to='media/project_thumbnail')
-    github_link = models.URLField()
+    github_link = models.URLField(null=True,blank=True)
+
+    def __str__(self):
+        return self.name
     
