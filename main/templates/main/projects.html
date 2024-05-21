@@ -10,8 +10,10 @@
                         <img src="{{MEDIA_URL}}{{p.thumbnail.url}}" alt="">
                     </div>
                     <div class="project-info">
-                        <h4>{{p.name}}</h4>
-                        <p>{{p.description}}</p>
+                        <div>
+                            <h4>{{p.name}}</h4>
+                            <p>{{p.description}}</p>
+                        </div>
                     </div>
                 </div>
             {% endfor %}

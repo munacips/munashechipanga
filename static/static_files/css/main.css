@@ -77,7 +77,7 @@ img{
 }
 .projects :nth-child(even){
     flex-direction: row-reverse;
-    display: flex;
+    /* display: flex; */
     padding: o.5em;
 }
 .project{

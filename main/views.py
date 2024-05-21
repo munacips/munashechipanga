@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Project
+from .forms import EmailForm
 
 def home(request):
     context = {}
