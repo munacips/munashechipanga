@@ -5,9 +5,9 @@ html,body{
     margin-top: 0;
 
 }
-.line{
-    box-shadow: 1px 1px 10px black;
-}
+/* .line{
+    box-shadow: 1px 1px 10px lime;
+} */
 .logo{
     color: black;
     text-decoration: none;
@@ -23,7 +23,7 @@ html,body{
 }
 .links nav ul li a{
     color: black;
-    text-decoration: underline;
+    text-decoration: underline lime 2px;
     font-size: 14pt;
 }
 .pic{
@@ -105,4 +105,58 @@ table tr td{
 }
 .var-results tr td{
     padding: 0.5em;
+}
+.article{
+    display: flex;
+    flex-direction: row;
+}
+.thumbnail{
+    width: 20vw;
+    height: 20vw;
+}
+.article-info{
+    padding: 1em;
+    flex: 1;
+}
+.videos{
+    display: none;
+}
+.articles{
+    display: block;
+}
+.videos{
+    display: block;
+}
+.blog-links{
+    display: flex;
+    flex-direction: row;
+}
+.blog-links ul{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    padding: 0.5em;
+}
+.blog-links ul li{
+    display: block;
+    list-style-type: none;
+    padding: 3px;
+}
+.blog-links ul li a{
+    color: black;
+    text-decoration: underline lime 1px;
+    padding: 0.25em;
+}
+.blog-videos div{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.video-container{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+.vid-thumb{
+    width: 20vw;
+    height: 20vw;
 }

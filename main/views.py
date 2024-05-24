@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from .models import Project
-from .forms import EmailForm
+from .models import Project, Video, Article, Comment
 
 def home(request):
     context = {}
@@ -21,5 +20,10 @@ def contact_info(request):
     return render(request,'main/contact.html',context)
 
 def blog(request):
-    context = {}
+    articles = Article.objects.all()
+    videos = Video.objects.all()
+    context = {
+        'articles' : articles,
+        'videos' : videos
+    }
     return render(request,'main/blog.html',context)
