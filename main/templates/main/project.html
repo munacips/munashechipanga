@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+    <h1>{{project}}</h1>
+    {% if project.github_link %}
+        <span>Github repository<a href="">{{project.github_link}}</a></span>
+    {% endif %}
+    <p>{{project.description}}</p>
+    {% if pictures %}
+        <h3>Pictures</h3>
+    {% endif %}
+    <div class="project-pics">
+        {% for pic in pictures %}
+            <div class="project-pic">
+                <img src="{{MEDIA_URL}}{{pic.pic.url}}" alt="{{project}}" onclick="location.href='{{MEDIA_URL}}{{pic.pic.url}}'">
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

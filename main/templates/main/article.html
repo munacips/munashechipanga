@@ -1,0 +1,10 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+    <h1>{{article}}</h1>
+    <span>{{article.date_posted}}</span><br>
+    <p>
+        {{article.body}}
+    </p>
+
+{% endblock %}

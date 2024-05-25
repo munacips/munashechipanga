@@ -1,0 +1,30 @@
+{% extends 'main/layout.html' %} {% block content %}
+
+<div class="blog-links">
+  <ul>
+    <li><a href="/blog">Articles</a></li>
+    <li><a href="/videos">Videos</a></li>
+  </ul>
+</div>
+<div>
+  <div class="blog-videos" id="videos">
+    <h4>Videos</h4>
+    <div class="grid">
+      {% for video in videos %}
+      <div class="video-container" onclick="location.href='/video/{{video.id}}'">
+        <div class="vid-thumb">
+          <img src="{{MEDIA_URL}}{{video.thumbnail.url}}" alt="{{video}}" />
+        </div>
+        <div class="vid-info">
+          <span style="font-size: 16px; font-weight: 600">{{video}}</span>
+          <p style="font-size: 14px; font-weight: 900">
+            {{video.date_posted}}<br />
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+{% block content %}
+
+<h1>{{video}}</h1>
+<span>{{video.date_posted}}</span><br>
+<div class="centered">
+    <video src="{{MEDIA_URL}}{{video.video.url}}" controls></video>
+</div>
+<br>
+<h4>Description</h4>
+<p>{{video.description}}</p>
+
+{% endblock %}

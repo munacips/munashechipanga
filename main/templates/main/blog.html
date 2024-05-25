@@ -1,17 +1,16 @@
 {% extends 'main/layout.html' %}
 {% block content %}
-
     <div class="blog-links">
         <ul>
-            <li><a href="" onclick="showArticles();">Articles</a></li>
-            <li><a href="" onclick="showVideos();">Videos</a></li>
+            <li><a href="/blog">Articles</a></li>
+            <li><a href="/videos">Videos</a></li>
         </ul>
     </div>
     <div>
         <div class="blog-articles" id="articles">
             <h4>Articles</h4>
             {% for article in articles %}
-                <div class="article">
+                <div class="article" onclick="location.href='/article/{{article.id}}'">
                     <div class="thumbnail">
                         <img src="{{MEDIA_URL}}{{article.thumbnail.url}}" alt="{{article}}">
                     </div>
@@ -26,25 +25,6 @@
                     </div>
                 </div>
             {% endfor %}
-        </div>
-        <div class="blog-videos" id="videos">
-            <h4>Videos</h4>
-            <div>
-                {% for video in videos %}
-                    <div class="video-container">
-                        <div class="vid-thumb">
-                            <img src="{{MEDIA_URL}}{{video.thumbnail.url}}" alt="{{video}}">
-                        </div>
-                        <div class="vid-info">
-                            <br>
-                            <span style="font-size: 16px; font-weight: 600;">{{video}}</span>
-                            <p style="font-size: 14px; font-weight: 900;">
-                                {{video.date_posted}}<br>
-                            </p>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
         </div>
     </div>
 

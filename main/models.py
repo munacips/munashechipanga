@@ -11,6 +11,11 @@ class Project(models.Model):
         return self.name
     
 
+class ProjectPic(models.Model):
+    pic = models.ImageField(upload_to='media/project_pics')
+    project = models.ForeignKey(Project,on_delete=models.CASCADE)
+    
+
 class Article(models.Model):
     title = models.CharField(max_length=100)
     date_posted = models.DateTimeField(auto_now_add=True)
