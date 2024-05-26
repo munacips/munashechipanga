@@ -16,10 +16,16 @@
                     </div>
                     <div class="article-info">
                         <h4>{{article}}</h4>
-                        <p>
+                        <p class="desk">
                             {{article.body|truncatewords:30}}
                         </p>
-                        <p style="font-size: 14px; font-weight: 900;">
+                        <span class="phone">
+                            {{article.body|truncatewords:5}}
+                        </span>
+                        <p class="desk" style="font-size: 14px; font-weight: 900;">
+                            {{article.date_posted}}<br>
+                        </p>
+                        <p class="phone" style="font-size: 12px; font-weight: 900;">
                             {{article.date_posted}}<br>
                         </p>
                     </div>
